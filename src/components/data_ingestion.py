@@ -1,5 +1,9 @@
 import os
 import sys
+
+# Adiciona o diretório raiz ao sys.path
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../')))
+
 import pandas as pd
 
 from src.exception import CustomException
@@ -58,6 +62,5 @@ if __name__ == '__main__':
     
     model_trainer = ModelTrainer()
     model_trainer.initiate_model_trainer(train_arr, test_arr)
-    
-    
-    
+
+
